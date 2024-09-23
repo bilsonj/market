@@ -1,0 +1,27 @@
+/* .example-container {
+    width: auto;
+    height: 650px;
+    margin: 10px;
+    border: 1px solid #555;
+   
+    background: #eee;
+  }
+  .sidebar{
+    width: 250px !important;
+  }
+  .nav-head{
+    color: blue !important;
+    /* background-color: black; */
+  /* } */
+  /* .sidenav{
+    width: 200px !important;
+    background-color: blueviolet !important;
+    height: 600px !important;
+  }  */
+  mat-sidenav-content{
+    height: calc(205vh - 115vh);
+  }
+  mat-sidenav{
+    background-color: blue !important;
+    width: 200px;
+  }

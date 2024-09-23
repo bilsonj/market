@@ -1,0 +1,48 @@
+.images{
+    height: 400px !important;
+    width: 300px !important;
+}
+.overall-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+h1{
+    text-align: center;
+}
+.list-group-item{
+  
+    list-style: none !important;
+}
+.overallcard{
+    height: 300px !important;
+    width: 350px !important;
+}
+.images{
+    height: 200px !important;
+    width: 300px;
+}
+.btn-continer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+
+}
+.card-continer{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    text-align: center;
+}
+.overall-market{
+    display: flex;
+    flex-direction: column;
+    gap: 40px !important;
+}

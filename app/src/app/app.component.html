@@ -1,0 +1,67 @@
+
+  <mat-toolbar class="nav-head">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="opened=!opened"
+    >
+      <mat-icon  >menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  
+  <mat-sidenav-container>
+      <mat-sidenav  mode="side" [(opened)]="opened" >
+        <div class="sidenav">
+          <button>
+            <a routerLink="/home">Home</a>
+        </button>
+
+        <button>
+        <a routerLink="/about">about</a>
+      </button>
+        </div>
+  
+<div class="log-reg">
+  <button>
+    <a routerLink="/login">Login</a>
+  </button>
+
+  <button>
+    <a routerLink="/register">Register</a>
+  </button>
+  <button>
+    <a routerLink="/showuser">Show users</a>
+  </button>
+</div>
+   
+      </mat-sidenav>
+      <mat-sidenav-content >
+ 
+      <router-outlet></router-outlet>
+       
+      </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+
+
+

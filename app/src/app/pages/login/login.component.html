@@ -1,0 +1,82 @@
+<!-- <div class="overall">
+  <form  #loginform="ngForm" (ngSubmit)="login(loginform)" >
+    <mat-card class="continer" appearance="outlined">
+      <h1 class="head">Login</h1>
+      
+      <div class="field-continer">
+        <mat-form-field class="example-full-width">
+          <mat-form-field class="example-full-width"></mat-form-field>
+            <mat-label>name</mat-label>
+            <input
+            type="text"
+            class="field" 
+          #email="ngModel"
+            matInput
+             placeholder="email" 
+             name="email" required
+              ngModel >
+          <span *ngIf="email.touched &&!email.valid">require email</span>
+        </mat-form-field>
+      
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>name</mat-label>
+          <input class="field" password="password" required ngModel #password="ngModel"  matInput placeholder="enter your password" >
+          <span *ngIf="password.touched &&!password.valid">require password</span>
+        </mat-form-field>
+      
+        <button class="btn" mat-fab extended  >click</button>
+      </div>
+       
+      </mat-card>
+  </form>
+   
+  </div> -->
+  
+  <!-- <app-navbar></app-navbar>
+    
+  <app-register></app-register> -->
+  
+  
+  <div class="overall" >
+
+    <form #register="ngForm" (ngSubmit)="login(register)">
+
+   
+    <mat-card class="continer" appearance="outlined">
+      <h1 class="head">Login</h1>
+      
+      <div class="field-continer">
+        
+
+
+
+        <mat-form-field class="example-full-width">
+          <mat-label>enter your Email</mat-label>
+          <input class="field"  matInput placeholder=" Email"  #email="ngModel" name="email" required [(ngModel)]="datas.email">
+          <span *ngIf="email.touched &&!email.valid">require email</span>
+        </mat-form-field>
+     
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>password</mat-label>
+         
+          <input class="field"  matInput placeholder="Password" #password="ngModel" name="password" required [(ngModel)]="datas.password" >
+          <span *ngIf="password.touched &&!password.valid">require password</span>
+        </mat-form-field>
+   
+        <button class="btn" mat-fab extended  [mtBasicSpinner]="load" (click)="save()">Login</button>
+        <!-- <button   mat-raised-button [mtBasicSpinner]="true">hi</button> -->
+       
+      </div>
+     
+      </mat-card>
+
+      
+    </form>
+  </div>
+
+  
+  
+  
+  

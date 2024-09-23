@@ -1,0 +1,22 @@
+
+<div class="continer">
+    <h3>register data</h3>
+<table class="table-continer">
+    <thead class="head">
+<tr >
+    <th>
+        name
+    </th>
+    <th>email</th>
+    <th>password</th>
+</tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of userrecords" class="datas">
+           <td>{{data.name}}</td>
+           <td>{{data.email}}</td>
+           <td>{{data.password}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

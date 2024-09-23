@@ -1,0 +1,51 @@
+<div class="overall" >
+
+    <form #register="ngForm" (ngSubmit)="saveall(register)">
+
+   
+    <mat-card class="continer" appearance="outlined">
+      <h1 class="head">Register</h1>
+      
+      <div class="field-continer">
+        <mat-form-field class="example-full-width">
+            <mat-label>name</mat-label>
+            <input
+            type="text"
+            class="field" 
+          #name="ngModel"
+            matInput
+             placeholder="name" 
+             name="name" required
+              [(ngModel)]="datas.name" >
+      <span *ngIf="name.touched &&!name.valid ">require name</span>
+          </mat-form-field>
+       
+
+
+
+        <mat-form-field class="example-full-width">
+          <mat-label>enter your Email</mat-label>
+          <input class="field"  matInput placeholder=" Email"  #email="ngModel" name="email" required 
+          [(ngModel)]="datas.email">
+          <span *ngIf="email.touched &&!email.valid">require email</span>
+        </mat-form-field>
+     
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>password</mat-label>
+         
+          <input class="field"  matInput placeholder="Password" #password="ngModel" name="password" required 
+          [(ngModel)]="datas.password">
+          <span *ngIf="password.touched &&!password.valid">require password</span>
+        </mat-form-field>
+   
+        <button class="btn" mat-fab extended>Register</button>
+
+       
+      </div>
+     
+      </mat-card>
+
+      
+    </form>
+  </div>

@@ -1,0 +1,18 @@
+.table-continer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.head{
+    background-color: blueviolet;
+   
+}
+.datas{
+    background-color: lightslategray;
+
+}
+h3{
+    text-align: center;
+}
