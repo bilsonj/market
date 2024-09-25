@@ -1,14 +1,39 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+export interface Userdatas{
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+} 
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomeService {
-  private url = 'https://jsonplaceholder.typicode.com/posts';
+
+ 
+
   constructor(private http:HttpClient) { }
 
-  gethomedatas(){
-    return this.http.get(this.url)
+  gethomedatas():Observable<Userdatas[]>{
+    const url = 'https://jsonplaceholder.typicode.com/posts';
+  return this.http.get<Userdatas[]>(url)
+
+
+
   }
+
+
+
+static(){
+  const datas:Userdatas={
+    userId: 11,
+    id: 0,
+    title: 'hi',
+    body: 'welcome'
+  }
+  return datas
+}
 }

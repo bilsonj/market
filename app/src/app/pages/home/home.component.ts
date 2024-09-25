@@ -1,8 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from './../../service/home.service';
-import { DailogComponent } from 'src/app/dailog/dailog.component';
-import { MatDialog } from '@angular/material/dialog';
+
+
 
 
 @Component({
@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  datas:any
   fasewash:number=1;
   fasewashrs:number=1;
   boost:number=1;
@@ -31,16 +32,14 @@ doys:number=1;
 doysrs:number=270;
 
 
- constructor(private dailog :DailogComponent){
+ constructor( public home:HomeService){
 
  }
- opendailog(){
-  // this.dailog.open(DailogComponent)
- }
+
 
 ngOnInit():void{
 
-
+ this.datas= this.home.gethomedatas()
 
 }
 
@@ -169,6 +168,12 @@ this.fasewash--;
 this.fasewashrs = 140 * this.fasewash;
   }
 }
+
+
 }
+
+
+
+
 
 
