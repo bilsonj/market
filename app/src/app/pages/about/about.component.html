@@ -5,7 +5,39 @@
     <img class="images" src="https://www.freeiconspng.com/uploads/about-us-icon-15.jpg" alt="">
 
 </div>
-<pre>{{mydata | json}}</pre>
-<button (click)="click()" > 
-    click me
-</button>
+<!-- <pre>{{mydata | json}}</pre> -->
+ <h3>getdatas</h3>
+ <div>
+    <table>
+        <thead>
+            <tr>
+                <th>userid</th>
+                
+                <th>id</th>
+                
+                <th>title</th>
+                
+                <th>body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let getalldatas of getalldatas">
+                <td>{{getalldatas.userId}}</td>
+                <td>{{getalldatas.id}}</td>
+                <td>{{getalldatas.title}}</td>
+                <td>{{getalldatas.body}}</td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+  
+ <h3>postalldatas</h3>
+ <label for="">userId</label>
+ <input type="text" name="" id="userId" [(ngModel)]="userId">
+ <label for="">title</label>
+ <input type="text" name="" id="title" [(ngModel)]="title">
+ <label for="">body</label>
+ <input type="text" name="" id="body" [(ngModel)]="body">
+ <button (click)="postdatas()">submit</button>
+<p>{{postalldatas | json}}</p> 
+

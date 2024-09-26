@@ -24,6 +24,9 @@ export class HomeService {
 
 
   }
+  // posthomedatas():Observable<Userdatas[]>{
+
+  // }
 
 
 

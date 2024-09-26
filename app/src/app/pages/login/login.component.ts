@@ -25,11 +25,7 @@ export class LoginComponent {
 //   this.load=true
 // }
 
-save() {
-  this.load = true;
-  
 
-}
 
 login(datas:NgForm){
 console.log(datas);
