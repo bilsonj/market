@@ -1,43 +1,127 @@
-<h1>About</h1>
 <div class="overall-img">
-    <img class="images" src="https://www.freeiconspng.com/uploads/about-us-icon-15.jpg" alt="">
-    <img class="images" src="https://www.freeiconspng.com/uploads/about-us-icon-15.jpg" alt="">
-    <img class="images" src="https://www.freeiconspng.com/uploads/about-us-icon-15.jpg" alt="">
 
+
+  <img
+    class="images"
+    src="https://st2.depositphotos.com/3591429/10566/i/450/depositphotos_105666254-stock-photo-business-people-at-meeting-and.jpg"
+    alt=""
+  />
 </div>
-<!-- <pre>{{mydata | json}}</pre> -->
- <h3>getdatas</h3>
- <div>
-    <table>
-        <thead>
-            <tr>
-                <th>userid</th>
-                
-                <th>id</th>
-                
-                <th>title</th>
-                
-                <th>body</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let getalldatas of getalldatas">
-                <td>{{getalldatas.userId}}</td>
-                <td>{{getalldatas.id}}</td>
-                <td>{{getalldatas.title}}</td>
-                <td>{{getalldatas.body}}</td>
-            </tr>
-        </tbody>
-    </table>
- </div>
-  
- <h3>postalldatas</h3>
- <label for="">userId</label>
- <input type="text" name="" id="userId" [(ngModel)]="userId">
- <label for="">title</label>
- <input type="text" name="" id="title" [(ngModel)]="title">
- <label for="">body</label>
- <input type="text" name="" id="body" [(ngModel)]="body">
- <button (click)="postdatas()">submit</button>
-<p>{{postalldatas | json}}</p> 
+<div class="veg-content">
+    <h1  class="veg-head">List of Vegetables: 240 Vegetables From A to Z</h1>
+        </div>
+<div class="img-cont-overall">
+  <div class="image-box">
+    <img
+      class="image"
+      src="https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg"
+      alt=""
+    />
+  </div>
+  <div class="content-box">
+    <h3>
+      From asparagus to zucchini, we’re covering the most popular types of
+      veggies from A to Z in this helpful list of vegetables! There are numerous
+      types of vegetables, each with its own unique use and health properties.
+      Explore them all in this comprehensive guide!
+    </h3>
 
+    <button mat-raised-button class="abt-btn">show review</button>
+  </div>
+</div>
+
+
+
+<div >
+    <h1 class="fin-heading">Welcome to Kidz FunLand, the ultimate destination for endless fun and adventure!</h1>
+    <h1 class="fin-heading"> Dive into our world of exciting games, creative play areas,</h1>
+    <h1 class="fin-heading"> and engaging activities designed just for kids</h1>
+        </div>
+
+<div class="img-cont-overall">
+
+
+    <div class="image-box2">
+      <img
+        class="image"
+        src="https://images.wagjag.com/images/deals/4419380/funland-indoor-playground-4419380-4031334-regular.jpg"
+        alt=""
+      />
+    </div>
+    <div class="child-game" >
+  <img class="finland" src="https://img.freepik.com/premium-photo/portrait-colorful-funland-play-zone-kids_1077802-216619.jpg" alt="">
+  
+   
+    </div>
+  </div>
+
+
+  <div class="overall-review">
+    <div class="review-box">
+        <h3>
+            Your child's favorite place to learn, play, and grow! Our vibrant play center is designed to ignite the imagination of children with a variety of interactive, safe, and fun activities. Founded on the belief that play is essential for development, Kidz FunLand offers a dynamic environment where kids can freely express themselves and explore their capabilities
+        </h3>
+    
+        <button mat-raised-button class="abt-btn">show review</button>
+      </div>
+      <div class="review-box">
+        <h3>
+            Our facility features a range of attractions including creative play zones, engaging educational games, and thrilling adventure areas. Each space is carefully curated to foster learning, physical activity, and social skills
+        </h3>
+    
+        <button mat-raised-button class="abt-btn">show review</button>
+      </div>
+      <div class="review-box">
+        <h3>
+          From asparagus to zucchini, we’re covering the most popular types of
+          veggies from A to Z in this helpful list of vegetables! There are numerous
+          types of vegetables, each with its own unique use and health properties.
+          Explore them all in this comprehensive guide!
+        </h3>
+    
+        <button mat-raised-button class="abt-btn">show review</button>
+      </div>
+
+  </div>
+<!-- <pre>{{mydata | json}}</pre> -->
+
+<h3>getdatas</h3>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>userid</th>
+
+        <th>id</th>
+
+        <th>title</th>
+
+        <th>body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let getalldatas of getalldatas">
+        <td>{{ getalldatas.userId }}</td>
+        <td>{{ getalldatas.id }}</td>
+        <td>{{ getalldatas.title }}</td>
+        <td>{{ getalldatas.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>postalldatas</h3>
+<label for="">userId</label>
+<input type="text" name="" id="userId" [(ngModel)]="userId" />
+<label for="">title</label>
+<input type="text" name="" id="title" [(ngModel)]="title" />
+<label for="">body</label>
+<input type="text" name="" id="body" [(ngModel)]="body" />
+<button (click)="postdatas()">submit</button>
+<p>{{ postalldatas | json }}</p>
+
+<p>{{ getalldatas.userId }}</p>
+
+<!-- <div *ngFor="let getalldatas of getalldatas">
+    <p>{{getalldatas.body}}</p>
+    </div> -->

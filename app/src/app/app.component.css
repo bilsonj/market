@@ -4,13 +4,13 @@ mat-sidenav-content{
     height: calc(205vh - 115vh);
   }
   mat-sidenav{
-    background-color:blueviolet !important;
+    background-color: rgb(11, 11, 55)  !important;
     width: 200px;
     display: flex;
     flex-direction: column;
   }
   mat-toolbar{
-    background-color: blueviolet;
+    background-color:  rgb(11, 11, 55); ;
     color: white;
   }
   .sidenav{

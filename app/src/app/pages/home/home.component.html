@@ -1,4 +1,4 @@
-<h1>welcome home</h1>
+<h1 class="heading">welcome home</h1>
 
 <div class="overall-img">
     <img class="images" src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Free-Amazing-Background-Images-Nature.jpg" alt="">
@@ -7,7 +7,7 @@
 
 </div>
 
-<h2>market</h2>
+<h2 class="heading">market</h2>
 <div class="overall-market">
 <div class="card-continer">
   <mat-card   class="overallcard"> 
@@ -21,9 +21,9 @@
     <button (click)="increses()">+</button>
     <p>{{pillow}}</p>
     <button (click)="decreses()">-</button>
-   
+    <button (click)="clickmagiee('pillow')">click</button>
    </div>
-   <p>{{pillowrs}}</p>
+   <p class="rs">{{pillowrs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -41,9 +41,9 @@
     <button (click)="increasemaggi()">+</button>
     <p>{{maggi}}</p>
     <button (click)="decresesmaggi()">-</button>
-  <button>click</button>
+  <button (click)="clickmagiee('maggi')">click</button>
    </div>
-   <p>{{maggirs}}</p>
+   <p class="rs">{{maggirs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -59,9 +59,9 @@
     <button (click)="incresesbottel()">+</button>
     <p>{{bottel}}</p>
     <button (click)="decresesbottel()">-</button>
-   
+    <button (click)="clickmagiee('bottels')">click</button>
    </div>
-   <p>{{bottelrs}}</p>
+   <p class="rs">{{bottelrs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -83,11 +83,11 @@
    <div class="btn-continer">
    
     <button (click)="increseslunch()">+</button>
-    <p>{{lunchbox}}</p>
+    <p >{{lunchbox}}</p>
     <button (click)="decreseslunch()">-</button>
-   
+    <button (click)="clickmagiee('lunchbox')">click</button>
    </div>
-   <p>{{lunchboxrs}}</p>
+   <p class="rs">{{lunchboxrs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -102,9 +102,9 @@
     <button (click)="increasepens()">+</button>
     <p>{{pens}}</p>
     <button (click)="decresespens()">-</button>
-   
+    <button (click)="clickmagiee('pens')">click</button>
    </div>
-   <p>{{pensrs}}</p>
+   <p class="rs">{{pensrs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -120,9 +120,9 @@
     <button (click)="incresessnacks()">+</button>
     <p>{{snacks}}</p>
     <button (click)="decresessnacks()">-</button>
-   
+    <button (click)="clickmagiee('snacks')">click</button>
    </div>
-   <p>{{snacksrs}}</p>
+   <p  class="rs">{{snacksrs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -147,9 +147,9 @@
     <button (click)="incresesdoys()">+</button>
     <p>{{doys}}</p>
     <button (click)="decresesdoys()">-</button>
-   
+    <button (click)="clickmagiee('doys')">click</button>
    </div>
-   <p>{{doysrs}}</p>
+   <p class="rs">{{doysrs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -164,9 +164,9 @@
     <button (click)="increaseboost()">+</button>
     <p>{{boost}}</p>
     <button (click)="decresesboost()">-</button>
-   
+    <button (click)="clickmagiee('boost')">click</button>
    </div>
-   <p>{{boostrs}}</p>
+   <p class="rs">{{boostrs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -182,9 +182,9 @@
     <button (click)="incresesfacewash()">+</button>
     <p>{{fasewash}}</p>
     <button (click)="decresesfacewash()">-</button>
-   
+    <button (click)="clickmagiee('fashwash')">click</button>
    </div>
-   <p>{{fasewashrs}}</p>
+   <p class="rs">{{fasewashrs}}</p>
     </mat-card-content>
   
   </mat-card>
@@ -195,6 +195,11 @@
 
 
 
+</div>
+<div class="feedback">
+  <h3 class="heading">enter your feedback</h3>
+  <textarea #name (blur)="inputvalues(name.value)" placeholder=" feedback box"></textarea>
+  <p>{{feedback}}</p>
 </div>
 
 <app-footer></app-footer>

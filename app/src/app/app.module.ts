@@ -26,7 +26,8 @@ import { ShowusersComponent } from './showusers/showusers.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgxLoadingButtonsModule } from 'ngx-loading-buttons';
 import {MatDialogModule} from "@angular/material/dialog";
-import { DailogComponent } from './dailog/dailog.component'
+import { DailogComponent } from './dailog/dailog.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DailogComponent } from './dailog/dailog.component'
     ShowusersComponent,
         FooterComponent,
         DailogComponent,
-  
+      
+
   ],
   imports: [
     BrowserModule,

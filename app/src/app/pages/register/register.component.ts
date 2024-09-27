@@ -5,15 +5,18 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserData } from './../../service/model';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
+
 export class RegisterComponent {
   userdatas: any[] = [];
-  datas = {
+  datas :UserData = {
     name: "",
     email: '',
     password: ''
@@ -23,7 +26,7 @@ export class RegisterComponent {
     this.loadUserData();
   }
 
-  loadUserData() {
+  loadUserData() :void{
     const storedData = localStorage.getItem('users');
     if (storedData) {
       this.userdatas = JSON.parse(storedData);

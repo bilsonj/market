@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { HomeService } from 'src/app/service/home.service';
 // import{Userdatas} from 'src/app/service/home.service'
@@ -39,22 +40,24 @@ this.postdatas();
 // }
 
 
-getdatas(){
-  // data la any nu use panna view la particular ah access pannalam 
-this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe((data)=>{
+ getdatas():void{
+  //  *ngfor use to take a dadas in particular or whole datas 
+ this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe((data)=>{
   console.log(data);
   this.getalldatas=data
 })
 }
 
-public postdatas(){
+public postdatas():void{
   let body={
     title: this.title,
     body: this.body,
     userId: this.userId ||1,
    
+   
   };
-  
+
+
   this.http.post('https://jsonplaceholder.typicode.com/posts',body).subscribe((data)=>{
     
 
@@ -63,6 +66,10 @@ public postdatas(){
 this.postalldatas=data 
   })
 }
+   
+
+
+
 
 }
 

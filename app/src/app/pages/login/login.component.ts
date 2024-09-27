@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import {LoginUserData} from './../../service/model'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,20 +10,18 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   userdatas: any[] = [];
-  load=false
-  datas = {
 
-    email: '',
-    password: ''
-  };
+ datas:LoginUserData = {
+  email: '',
+  password: '',
+  
+};
   
 
   constructor(private router:Router){
 
   }
-// save(){
-//   this.load=true
-// }
+
 
 
 

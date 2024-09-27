@@ -30,7 +30,8 @@ snacks:number=1;
 snacksrs:number=170;
 doys:number=1;
 doysrs:number=270;
-
+name:string='';
+feedback: string = '';
 
  constructor( public home:HomeService){
 
@@ -168,7 +169,14 @@ this.fasewash--;
 this.fasewashrs = 140 * this.fasewash;
   }
 }
+clickmagiee(name:string):void{
+alert(`your order ${name} successfull`)
 
+}
+inputvalues( enter:string):void{
+  this.feedback=enter
+console.log(enter)
+}
 
 }
 
