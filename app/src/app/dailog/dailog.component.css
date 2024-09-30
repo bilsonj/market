@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.overall-dailog{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    background-color:rgb(11, 11, 55) ;
+    color: yellow;
+}
+.dailog-btn{
+    display: flex;
+    gap: 30px;
+
+
+}
+.btn{
+    background-color: yellow !important;
+    color:rgb(11, 11, 55) ;
+}

@@ -27,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NgxLoadingButtonsModule } from 'ngx-loading-buttons';
 import {MatDialogModule} from "@angular/material/dialog";
 import { DailogComponent } from './dailog/dailog.component';
-
+import { SharedModule } from './shared.modules';
+import { ApicheckComponent } from './apicheck/apicheck.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { DailogComponent } from './dailog/dailog.component';
     ShowusersComponent,
         FooterComponent,
         DailogComponent,
+        ApicheckComponent,
       
 
   ],
@@ -62,7 +64,8 @@ MatListModule,
 HttpClientModule,
 MatTableModule,
 NgxLoadingButtonsModule,
-MatDialogModule
+MatDialogModule,
+SharedModule
 
 
     

@@ -58,8 +58,9 @@ color: rgb(11, 11, 55);  ;
  font-weight: bold !important;
 }
 .review-box{
-  height: 300px;
-  width: 400px;
+  height: 300px ;
+  width: 350px;
+  margin-top: 30px;
   background-color: rgb(11, 11, 55);
   color: yellow;
   border-radius: 10px;

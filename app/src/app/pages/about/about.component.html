@@ -26,7 +26,7 @@
       Explore them all in this comprehensive guide!
     </h3>
 
-    <button mat-raised-button class="abt-btn">show review</button>
+    <button mat-raised-button class="abt-btn" (click)="opendailog()">show review</button>
   </div>
 </div>
 
@@ -62,24 +62,24 @@
             Your child's favorite place to learn, play, and grow! Our vibrant play center is designed to ignite the imagination of children with a variety of interactive, safe, and fun activities. Founded on the belief that play is essential for development, Kidz FunLand offers a dynamic environment where kids can freely express themselves and explore their capabilities
         </h3>
     
-        <button mat-raised-button class="abt-btn">show review</button>
+        <button mat-raised-button class="abt-btn"  (click)="opendailog()">show review</button>
       </div>
       <div class="review-box">
         <h3>
             Our facility features a range of attractions including creative play zones, engaging educational games, and thrilling adventure areas. Each space is carefully curated to foster learning, physical activity, and social skills
         </h3>
     
-        <button mat-raised-button class="abt-btn">show review</button>
+        <button mat-raised-button class="abt-btn"  (click)="opendailog()">show review</button>
       </div>
       <div class="review-box">
         <h3>
           From asparagus to zucchini, we’re covering the most popular types of
           veggies from A to Z in this helpful list of vegetables! There are numerous
           types of vegetables, each with its own unique use and health properties.
-          Explore them all in this comprehensive guide!
+        
         </h3>
     
-        <button mat-raised-button class="abt-btn">show review</button>
+        <button mat-raised-button class="abt-btn"  (click)="opendailog()">show review</button>
       </div>
 
   </div>
@@ -120,7 +120,7 @@
 <button (click)="postdatas()">submit</button>
 <p>{{ postalldatas | json }}</p>
 
-<p>{{ getalldatas.userId }}</p>
+<p> {{ getalldatas.body}}</p>
 
 <!-- <div *ngFor="let getalldatas of getalldatas">
     <p>{{getalldatas.body}}</p>

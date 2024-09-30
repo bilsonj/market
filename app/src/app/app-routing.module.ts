@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 
 import { ShowusersComponent } from './showusers/showusers.component';
+import { ApicheckComponent } from './apicheck/apicheck.component';
 
 const routes: Routes = [
 
@@ -41,6 +42,10 @@ component:AboutComponent
 },{
   path:'showuser',
   component:ShowusersComponent
+},{
+path:"apicheck",
+component:ApicheckComponent
+
 }
 
 

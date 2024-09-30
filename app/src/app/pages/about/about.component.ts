@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 
 import { HomeService } from 'src/app/service/home.service';
 // import{Userdatas} from 'src/app/service/home.service'
+import { MatDialog } from '@angular/material/dialog';
+import { DailogComponent } from 'src/app/dailog/dailog.component';
 
 
 @Component({
@@ -19,7 +21,7 @@ export class AboutComponent implements OnInit {
   userId: number | null = null;
   getalldatas:any;
   postalldatas:any;
-constructor(private homeservise:HomeService ,private http :HttpClient){
+constructor(private homeservise:HomeService ,private http :HttpClient,private  matdailog: MatDialog){
 
 }
 ngOnInit() :void {
@@ -68,7 +70,9 @@ this.postalldatas=data
 }
    
 
-
+opendailog():void{
+  this.matdailog.open(DailogComponent)
+}
 
 
 }

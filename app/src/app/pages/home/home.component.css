@@ -19,6 +19,7 @@ h1{
 .overallcard{
     height: 300px !important;
     width: 350px !important;
+    background-color:rgb(11, 11, 55) !important;
 }
 .images{
     height: 200px !important;
@@ -52,16 +53,17 @@ h2{
     align-items: center;
 }
 button{
-    background-color: blueviolet;
-    color: white;
+    background-color:yellow  !important;
+    color:rgb(11, 11, 55) !important;
     border: none;
     height: 30px;
     width: 70px;
 }
 .rs{
     text-align: center;
-    color: blueviolet;
+    color: rgb(11, 11, 55);
 }
 .heading{
-    color: blueviolet;
+ 
+    color: rgb(11, 11, 55);
 }
