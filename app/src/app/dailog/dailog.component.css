@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -23,4 +23,12 @@
 .btn{
     background-color: yellow !important;
     color:rgb(11, 11, 55) ;
-}
+} */
+ .card-img-top{
+    width: 200px !important;
+ }
+ .product-container{
+    display: flex;
+    width: 500px !important;
+    padding: 30px;
+ }

@@ -61,7 +61,7 @@ MatToolbarModule,
 MatIconModule,
 MatSidenavModule,
 MatListModule,
-HttpClientModule,
+
 MatTableModule,
 NgxLoadingButtonsModule,
 MatDialogModule,

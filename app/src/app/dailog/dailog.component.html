@@ -1,5 +1,4 @@
-
-<div class="overall-dailog">
+<!-- <div class="overall-dailog">
     <h3>Review</h3>
     <p> some say is a good place to shop, eat, and watch a movie. However, one reviewer said that the mall lacks proper signage and customer guidance, and that they were disappointed with the security guard's behavior.</p>
 <div class="dailog-btn">
@@ -8,7 +7,17 @@
 </div>
 
 
+</div> -->
+
+<div class="product-container">
+
+  <div class="card">
+    <img [src]="data.image" alt="{{ data.title }}" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{{ data.title }}</h5>
+      <p class="card-text">Price: ${{ data.price }}</p>/
+      <p class="card-text">{{ data.description }}</p>
+      <button mat-raised-button mat-dialog-close>close</button>
+    </div>
+  </div>
 </div>
-
-
-
