@@ -1,0 +1,11 @@
+<form  #form="ngForm" (ngSubmit)="onCreate(form)">
+    <mat-form-field>
+        <mat-label>create catagorys</mat-label>
+        <input matInput  name="title" ngModel required />
+      </mat-form-field>
+      <div>
+        <button mat-raised-button mat-dialog-close mat-dialog-close>Cancel</button>
+        <button type="submit" mat-raised-button mat-dialog-close>Create</button>
+      </div>
+</form>
+<!-- <p *ngFor="let catagory of createlist">{{catagory}}</p> -->

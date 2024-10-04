@@ -4,8 +4,14 @@ import { ApicheckService } from '../service/apicheck.service';
 import { Postvalues } from '../service/model';
 import { MatDialog } from '@angular/material/dialog';
 import { DailogComponent } from '../dailog/dailog.component';
+import { Product } from '../service/model';
+import { FormDailogComponent } from '../form-dailog/form-dailog.component';
+import { AddDailogComponent } from '../add-dailog/add-dailog.component';
 
-
+import { Observable } from 'rxjs';
+import { Singleproduct } from '../service/model';
+import { Delete } from '../service/model';
+import { Getall } from './../service/model';
 @Component({
   selector: 'app-apicheck',
   templateUrl: './apicheck.component.html',
@@ -20,14 +26,16 @@ todopost:any=[];
   userId:3,
   title:'welcome'
 }
-  productdata: any=[];
-  particular: any=[];
+  productdata:Getall|undefined
+  particular: Singleproduct | undefined;
   addpost: any=[];
-  delapi: any=[];
+  delapi:Delete | undefined;
   getcards: any=[];
   update: any=[];
   catagory: any=[];
   specfic: any=[];
+formdata: any;
+add: any;
 
   constructor(private apicheck:ApicheckService,private matdailog:MatDialog){
 
@@ -67,7 +75,7 @@ this.apicheck.getdatas()
 
   put(){
     this.apicheck.putdatas({id:2,userId:2,title:'hello'})
-    .subscribe(data=>console.log(data)
+    .subscribe(data=>console.log("putdatas",data)
     )
   }
   product(){
@@ -78,6 +86,10 @@ this.apicheck.getdatas()
       
     })
   }
+
+ 
+
+  
   singleproduct(){
     this.apicheck.singleproduct()
     .subscribe(data=>{
@@ -90,7 +102,14 @@ this.apicheck.getdatas()
   }
 
   postproduct(){
-    this.apicheck.postproduct()
+    var data:Product={
+      title: 'test product',
+      price: 13.5,
+      description: 'lorem ipsum set',
+      image: 'https://i.pravatar.cc',
+      category: 'electronic'
+    }
+    this.apicheck.postproduct(data)
     .subscribe(data=>{
       this.addpost=data
     })
@@ -102,6 +121,16 @@ this.matdailog.open(DailogComponent,{
 })
   }
 
+  popupform(formdata:any){
+    this.matdailog.open(FormDailogComponent,{
+      data:formdata
+    })
+  }
+adddailog(add:any){
+  this.matdailog.open(AddDailogComponent,{
+data:add
+  })
+}
   deleteapi(){
     this.apicheck.delete()
     .subscribe(data=>{
@@ -117,6 +146,7 @@ this.matdailog.open(DailogComponent,{
     })
   }
   updatevalues(){
+    
     this.apicheck.update()
     .subscribe(data=>{
       this.update=data
@@ -139,4 +169,13 @@ this.matdailog.open(DailogComponent,{
     })
   }
 
+
 }
+
+
+
+
+
+
+
+

@@ -2,9 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Postvalues } from './model';
 import { Observable } from 'rxjs';
-
+import { Getall } from './model';
+import { Singleproduct } from './model';
+import { Delete } from './model';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root'  
 })
 export class ApicheckService {
 
@@ -26,25 +28,18 @@ export class ApicheckService {
     
    }
 
-   getallproduct(){
-    return this.http.get('https://fakestoreapi.com/products ')
+   getallproduct():Observable<Getall>{
+    return this.http.get<Getall>('https://fakestoreapi.com/products')
    }
-   singleproduct(){
-    return this.http.get('https://fakestoreapi.com/products/13')
+   singleproduct():Observable<Singleproduct>{
+    return this.http.get<Singleproduct>('https://fakestoreapi.com/products/13')
    }
 
-   postproduct(){
-    return this.http.post('https://fakestoreapi.com/products',{
-
-      title: 'test product',
-      price: 13.5,
-      description: 'lorem ipsum set',
-      image: 'https://i.ytimg.com/vi/Y7BR7XfF9eU/hqdefault.jpg',
-      category: 'electronic'
-    })
+   postproduct(data:any){
+    return this.http.post('https://fakestoreapi.com/products',data)
    }
-delete(){
-  return this.http.delete('https://fakestoreapi.com/products/3')
+delete():Observable<Delete>{
+  return this.http.delete<Delete>('https://fakestoreapi.com/products/3')
 }
    
 getcard(){

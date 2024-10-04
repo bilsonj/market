@@ -15,3 +15,51 @@
     userId:number,
     title:string
   }
+
+  export interface Product{
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+  }
+
+  export interface Getall{
+
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+    rating:{
+      rate:number
+      count:number
+    }
+  }
+
+  export interface Singleproduct{
+
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+    rating:{
+      rate:number
+      count:number
+    }
+  }
+
+
+  export interface Delete{
+
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+    rating:{
+      rate:number
+      count:number
+    }
+  }

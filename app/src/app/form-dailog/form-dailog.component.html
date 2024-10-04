@@ -1,0 +1,38 @@
+<form #myform="ngForm" (ngSubmit)=" onSubmit(myform)">
+
+  <div class="form-overall">
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput  name="title" ngModel required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Price</mat-label>
+        <input matInput  name="price" ngModel required/>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput name="description" ngModel required />
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Image</mat-label>
+        <input matInput name="image" ngModel required />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label >catagorys</mat-label>
+        <mat-select name="catagorys" ngModel required>
+          <mat-option value="one">Jewelery</mat-option>
+          <mat-option value="two">Electronics</mat-option>
+          <mat-option value="three">Men's clothing</mat-option>
+          <mat-option value="four">Women's clothing</mat-option>
+        </mat-select>
+      
+       
+      </mat-form-field>
+      <button type="submit" class="submit-form" mat-raised-button mat-dialog-close  >Supmit</button>
+</div>
+
+
+
+</form>

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatSelectModule} from '@angular/material/select';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,6 +29,11 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { DailogComponent } from './dailog/dailog.component';
 import { SharedModule } from './shared.modules';
 import { ApicheckComponent } from './apicheck/apicheck.component';
+import { FormDailogComponent } from './form-dailog/form-dailog.component';
+import { ToastrModule } from 'ngx-toastr';
+import { AddDailogComponent } from './add-dailog/add-dailog.component';
+
+
 
 @NgModule({
   declarations: [
@@ -43,6 +48,9 @@ import { ApicheckComponent } from './apicheck/apicheck.component';
         FooterComponent,
         DailogComponent,
         ApicheckComponent,
+        FormDailogComponent,
+        AddDailogComponent,
+      
       
 
   ],
@@ -54,6 +62,7 @@ import { ApicheckComponent } from './apicheck/apicheck.component';
     MatCardModule,
     MatInputModule,
     MatSidenavModule,
+    MatIconModule,
 FormsModule,
 ReactiveFormsModule,
 MatFormFieldModule,
@@ -61,11 +70,12 @@ MatToolbarModule,
 MatIconModule,
 MatSidenavModule,
 MatListModule,
-
+MatSelectModule,
 MatTableModule,
 NgxLoadingButtonsModule,
 MatDialogModule,
-SharedModule
+SharedModule,
+ToastrModule
 
 
     

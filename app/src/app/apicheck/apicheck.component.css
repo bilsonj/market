@@ -20,4 +20,13 @@
   .card-body {
     padding: 15px;
   }
-  
+  .addproductbtn{
+  color: rgb(11, 11, 55) !important;  
+    background-color: yellow !important;
+   
+  }
+  .addproduct{
+    display: flex;
+    justify-content:end;
+    padding: 40px;
+  }

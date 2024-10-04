@@ -1,11 +1,38 @@
-<p>apicheck works!</p>
+<!-- <p>apicheck works!</p>
 <p>jji {{ todo | json }}</p>
 
-<p>{{ todopost | json }}</p>
+<p>{{ todopost | json }}</p> -->
+<!-- <p *ngFor="let catagory of createlist">{{catagory}}</p> -->
+<mat-form-field>
+  <mat-label>catagorys</mat-label>
+  <mat-select name="catagorys" ngModel required>
+    <mat-option value="one">Jewelery</mat-option>
+    <mat-option value="two">Electronics</mat-option>
+    <mat-option value="three">Men's clothing</mat-option>
+    <mat-option value="four">Women's clothing</mat-option>
+  </mat-select>
+</mat-form-field>
+<div class="addproduct">
+  <button class="addproductbtn" mat-raised-button (click)="popupform(formdata)">
+    Add Product
+  </button>
+
+  <button mat-raised-button (click)="adddailog(add)">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
 
 <div class="product-container">
-  <div class="card" *ngFor="let product of productdata" (click)="popup(product)" >
-    <img [src]="product.image" alt="{{ product.title }}" class="card-img-top" />
+  <div
+    class="card"
+    *ngFor="let product  productdata"
+    (click)="popup(product)"
+  >
+    <img
+      [src]="product.image"
+      alt="{{ product.title }}"
+      class="card-img-top"
+    />
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text">Price: ${{ product.price }}</p>
@@ -13,31 +40,31 @@
     </div>
   </div>
 </div>
+
+
+
+
+
 <h1>get a single product</h1>
-<div class="product-container"  >
-  <div class="card"  (click)="popup(product)"  >
+<div class="product-container">
+  <div class="card" (click)="popup(product)">
     <img
-      [src]="particular.image"
-      alt="{{ particular.title }}"
+      [src]="particular?.image"
+      alt="{{ particular?.title }}"
       class="card-img-top"
     />
     <div class="card-body">
-      <h3 class="card-title">{{ particular.title }}</h3>
-      <p class="card-text">price:${{ particular.price }}</p>
-      <p class="card-text">{{ particular.description }}</p>
+      <h3 class="card-title">{{ particular?.title }}</h3>
+      <p class="card-text">price:${{ particular?.price }}</p>
+      <p class="card-text">{{ particular?.description }}</p>
     </div>
   </div>
 </div>
 
-
 <h1>add new product</h1>
 <div class="product-container">
-  <div class="card"   >
-    <img
-      [src]="addpost.image"
-      alt="{{ addpost.title }}"
-      class="card-img-top"
-    />
+  <div class="card">
+    <img [src]="addpost.image" alt="{{ addpost.title }}" class="card-img-top" />
     <div class="card-body">
       <h3 class="card-title">{{ addpost.title }}</h3>
       <p class="card-text">price:${{ addpost.price }}</p>
@@ -46,36 +73,65 @@
   </div>
 </div>
 
-<p>{{getcards | json}}</p>
-<h3>update </h3>
+<p>{{ getcards | json }}</p>
+<h3>update</h3>
 <div class="product-container">
-    <div class="card">
-      <img
-        [src]="update.image"
-        alt="{{ update.title }}"
-        class="card-img-top"
-      />
-      <div class="card-body">
-        <h3 class="card-title">{{ update.title }}</h3>
-        <p class="card-text">price:${{ update.price }}</p>
-        <p class="card-text">{{ update.description }}</p>
-      </div>
+  <div class="card">
+    <img [src]="update.image" alt="{{ update.title }}" class="card-img-top" />
+    <div class="card-body">
+      <h3 class="card-title">{{ update.title }}</h3>
+      <p class="card-text">price:${{ update.price }}</p>
+      <p class="card-text">{{ update.description }}</p>
     </div>
   </div>
+</div>
 
- <p>catagory</p> 
+<p>catagory</p>
 <div *ngFor="let cato of catagory">
-
-<p>{{cato}}</p>
+  <p>{{ cato }}</p>
 </div>
 <h3>specific selection</h3>
 <div class="product-container">
-    <div class="card" *ngFor="let product of specfic" (click)="popup(product)" >
-      <img [src]="product.image" alt="{{ product.title }}" class="card-img-top" />
-      <div class="card-body">
-        <h5 class="card-title">{{ product.title }}</h5>
-        <p class="card-text">Price: ${{ product.price }}</p>
-        <p class="card-text">{{ product.description }}</p>
-      </div>
+  <div class="card" *ngFor="let product of specfic" (click)="popup(product)">
+    <img [src]="product.image" alt="{{ product.title }}" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{{ product.title }}</h5>
+      <p class="card-text">Price: ${{ product.price }}</p>
+      <p class="card-text">{{ product.description }}</p>
     </div>
   </div>
+</div>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th>catagorys</th>
+  </tr>
+
+  <tr>
+    <td>hi</td>
+    <td>welcomr</td>
+    <td>hi</td>
+    <td>hello</td>
+    <td>hi</td>
+    <td></td>
+  </tr>
+</table>
+
+<!-- <div>
+  <p>{{delapi | json}}</p>
+</div> -->
+<h2>delete api</h2>
+<div class="product-container">
+  <div class="card">
+    <img [src]="delapi?.image" alt="{{ delapi?.title }}" class="card-img-top" />
+    <div class="card-body">
+      <h3 class="card-title">{{ delapi?.title }}</h3>
+      <p class="card-text">price:${{ delapi?.price }}</p>
+      <p class="card-text">{{ delapi?.description }}</p>
+    </div>
+  </div>
+</div>
