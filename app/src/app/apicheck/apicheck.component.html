@@ -25,8 +25,8 @@
 <div class="product-container">
   <div
     class="card"
-    *ngFor="let product  productdata"
-    (click)="popup(product)"
+    *ngFor="let product of  productdata"
+    (click)="popup(productpop)"
   >
     <img
       [src]="product.image"
@@ -47,7 +47,7 @@
 
 <h1>get a single product</h1>
 <div class="product-container">
-  <div class="card" (click)="popup(product)">
+  <div class="card" (click)="popup(productpop)">
     <img
       [src]="particular?.image"
       alt="{{ particular?.title }}"
@@ -64,11 +64,11 @@
 <h1>add new product</h1>
 <div class="product-container">
   <div class="card">
-    <img [src]="addpost.image" alt="{{ addpost.title }}" class="card-img-top" />
+    <img [src]="addpost?.image" alt="{{ addpost?.title }}" class="card-img-top" />
     <div class="card-body">
-      <h3 class="card-title">{{ addpost.title }}</h3>
-      <p class="card-text">price:${{ addpost.price }}</p>
-      <p class="card-text">{{ addpost.description }}</p>
+      <h3 class="card-title">{{ addpost?.title }}</h3>
+      <p class="card-text">price:${{ addpost?.price }}</p>
+      <p class="card-text">{{ addpost?.description }}</p>
     </div>
   </div>
 </div>
@@ -77,22 +77,22 @@
 <h3>update</h3>
 <div class="product-container">
   <div class="card">
-    <img [src]="update.image" alt="{{ update.title }}" class="card-img-top" />
+    <img [src]="update?.image" alt="{{ update?.title }}" class="card-img-top" />
     <div class="card-body">
-      <h3 class="card-title">{{ update.title }}</h3>
-      <p class="card-text">price:${{ update.price }}</p>
-      <p class="card-text">{{ update.description }}</p>
+      <h3 class="card-title">{{ update?.title }}</h3>
+      <p class="card-text">price:${{ update?.price }}</p>
+      <p class="card-text">{{ update?.description }}</p>
     </div>
   </div>
 </div>
 
 <p>catagory</p>
-<div *ngFor="let cato of catagory">
+<div *ngFor="let cato of  catagory">
   <p>{{ cato }}</p>
 </div>
 <h3>specific selection</h3>
 <div class="product-container">
-  <div class="card" *ngFor="let product of specfic" (click)="popup(product)">
+  <div class="card" *ngFor="let product of specfic" (click)="popup(productpop)">
     <img [src]="product.image" alt="{{ product.title }}" class="card-img-top" />
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>

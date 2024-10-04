@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { onCreate } from '../service/model';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class AddDailogComponent {
  createlist: any;
- constructor(@Inject(MAT_DIALOG_DATA) public data:any ){}
+ form:onCreate|undefined
+ constructor(@Inject(MAT_DIALOG_DATA) public data:onCreate[]){}
 
  onCreate(form:any){
 console.log("create value",form.value)

@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ApicheckService } from '../service/apicheck.service';
-import { Postvalues } from '../service/model';
+
 import { MatDialog } from '@angular/material/dialog';
 import { DailogComponent } from '../dailog/dailog.component';
-import { Product } from '../service/model';
+import {  Dailog, Formdata, onCreate, Product, Specific, Update } from '../service/model';
 import { FormDailogComponent } from '../form-dailog/form-dailog.component';
 import { AddDailogComponent } from '../add-dailog/add-dailog.component';
 
 import { Observable } from 'rxjs';
 import { Singleproduct } from '../service/model';
-import { Delete } from '../service/model';
-import { Getall } from './../service/model';
+
+import { Getall, Delete, Postvalues, Getcarts,  } from './../service/model';
 @Component({
   selector: 'app-apicheck',
   templateUrl: './apicheck.component.html',
@@ -19,68 +19,45 @@ import { Getall } from './../service/model';
 })
 export class ApicheckComponent {
 
-todo:any=[]
-todopost:any=[];
-  body:Postvalues={
-  id:4,
-  userId:3,
-  title:'welcome'
-}
-  productdata:Getall|undefined
+
+  productdata:Getall[] =[]
   particular: Singleproduct | undefined;
-  addpost: any=[];
-  delapi:Delete | undefined;
-  getcards: any=[];
-  update: any=[];
-  catagory: any=[];
-  specfic: any=[];
-formdata: any;
-add: any;
+  addpost: Product|undefined;
+  delapi:Delete |undefined;
+  getcards: Getcarts|undefined;
+  update: Update|undefined;
+  catagory:string|undefined;
+  specfic: Specific[] =[];
+  //popup
+formdata:Formdata[]=[];
+add:onCreate[]=[];
+productpop:Dailog[]=[]
+
 
   constructor(private apicheck:ApicheckService,private matdailog:MatDialog){
+    // const httpClient = new HttpClient();
+    // apicheck = new ApicheckService(httpClient);
 
-this.get()
-this.post()
-this.put()
-this.product()
-this.singleproduct()
-this.postproduct()
-this.deleteapi()
-this.cards()
-this.updatevalues()
-this.catagories()
-this.specificcatagory()
+    // this.get()
+    // this.post()
+
+    this.product()
+    this.singleproduct()
+    this.postproduct()
+    this.deleteapi()
+    this.cards()
+    this.updatevalues()
+    this.catagories()
+    this.specificcatagory()
 
   }
 
-  get(){
-this.apicheck.getdatas()
-.subscribe(
-  data=>this.todo=data
-)
-  }
 
-  post(){
 
-    this.apicheck.postdatas(this.body)
-    .subscribe(data=>{
-    this.todopost=data
-    console.log(data);
-    
-    
-  })
-    
-    
-  }
 
-  put(){
-    this.apicheck.putdatas({id:2,userId:2,title:'hello'})
-    .subscribe(data=>console.log("putdatas",data)
-    )
-  }
   product(){
     this.apicheck.getallproduct()
-    .subscribe(data=>{
+    .subscribe((data:Getall[])=>{
       this.productdata=data
       console.log(data);
       
@@ -92,7 +69,7 @@ this.apicheck.getdatas()
   
   singleproduct(){
     this.apicheck.singleproduct()
-    .subscribe(data=>{
+    .subscribe((data :Singleproduct)=>{
       this.particular=data
 
       console.log(data);
@@ -114,26 +91,26 @@ this.apicheck.getdatas()
       this.addpost=data
     })
   }
-  popup(product:any){
+  popup(productpop:Dailog[]){
 this.matdailog.open(DailogComponent,{
-  data:product
+  data:productpop
   
 })
   }
 
-  popupform(formdata:any){
+  popupform(formdata:Formdata[]){
     this.matdailog.open(FormDailogComponent,{
       data:formdata
     })
   }
-adddailog(add:any){
+adddailog(add:onCreate[]){
   this.matdailog.open(AddDailogComponent,{
 data:add
   })
 }
   deleteapi(){
     this.apicheck.delete()
-    .subscribe(data=>{
+    .subscribe((data:Getall)=>{
       this.delapi=data
       console.log("del",data);
       
@@ -141,14 +118,14 @@ data:add
   }
   cards(){
     this.apicheck.getcard()
-    .subscribe(data=>{
+    .subscribe((data :Getcarts)=>{
       this.getcards=data
     })
   }
   updatevalues(){
     
     this.apicheck.update()
-    .subscribe(data=>{
+    .subscribe((data :Update)=>{
       this.update=data
       console.log( "update",data);
       
@@ -156,13 +133,13 @@ data:add
   }
   catagories(){
     this.apicheck.catogories()
-    .subscribe(data=>{
+    .subscribe((data:string)=>{
       this.catagory=data
     })
   }
   specificcatagory(){
     this.apicheck.specificcatogary()
-    .subscribe(data=>{
+    .subscribe((data :Specific[])=>{
       this.specfic=data
       console.log("specific",data);
       

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Postvalues } from './model';
+import {  Getcarts, Postvalues, Product, Specific, Update } from './model';
 import { Observable } from 'rxjs';
 import { Getall } from './model';
 import { Singleproduct } from './model';
@@ -13,41 +13,27 @@ export class ApicheckService {
   constructor(private http :HttpClient) { }
 
 
-  getdatas(){
-   return this.http.get('https://jsonplaceholder.typicode.com/todos/1')
-   
-  }
 
-  postdatas(data:Postvalues):Observable<Postvalues>{
-    return this.http.post<Postvalues>('https://jsonplaceholder.typicode.com/todos',data)
-    
-   }
-
-   putdatas( data:any){
-    return this.http.put(`https://jsonplaceholder.typicode.com/todos/${data.id}`,data)
-    
-   }
-
-   getallproduct():Observable<Getall>{
-    return this.http.get<Getall>('https://fakestoreapi.com/products')
+   getallproduct():Observable<Getall[]>{
+    return this.http.get<Getall[]>('https://fakestoreapi.com/products')
    }
    singleproduct():Observable<Singleproduct>{
     return this.http.get<Singleproduct>('https://fakestoreapi.com/products/13')
    }
 
-   postproduct(data:any){
-    return this.http.post('https://fakestoreapi.com/products',data)
+   postproduct(data:Product):Observable<Product>{
+    return this.http.post<Product>('https://fakestoreapi.com/products',data)
    }
 delete():Observable<Delete>{
   return this.http.delete<Delete>('https://fakestoreapi.com/products/3')
 }
    
-getcard(){
-  return this.http.get('https://fakestoreapi.com/carts')
+getcard():Observable<Getcarts>{
+  return this.http.get<Getcarts>('https://fakestoreapi.com/carts')
 }
 
-update(){
-  return this.http.put('https://fakestoreapi.com/products/1 ',{
+update():Observable<Update>{
+  return this.http.put<Update>('https://fakestoreapi.com/products/1 ',{
 
 
     title: 'ave mariya',
@@ -58,12 +44,12 @@ update(){
   })
 }
 
-catogories(){
-  return this.http.get('https://fakestoreapi.com/products/categories')
+catogories():Observable<string>{
+  return this.http.get<string>('https://fakestoreapi.com/products/categories')
 }
 
-specificcatogary(){
-  return this.http.get('https://fakestoreapi.com/products/category/electronics')
+specificcatogary():Observable<Specific[]>{
+  return this.http.get<Specific[]>('https://fakestoreapi.com/products/category/electronics')
 }
 }
 

@@ -31,10 +31,7 @@
     description: string,
     image: string,
     category: string
-    rating:{
-      rate:number
-      count:number
-    }
+ 
   }
 
   export interface Singleproduct{
@@ -44,10 +41,7 @@
     description: string,
     image: string,
     category: string
-    rating:{
-      rate:number
-      count:number
-    }
+ 
   }
 
 
@@ -58,8 +52,84 @@
     description: string,
     image: string,
     category: string
-    rating:{
-      rate:number
-      count:number
-    }
+   
+
+  }
+
+  export interface Delete{
+
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+   
+
+  }
+
+  export interface Getcarts{
+
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+   
+
+  }
+
+  export interface Update{
+
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+   
+
+  }
+
+  // export interface Catogaries{
+
+  //   title: string,
+  //   price: number,
+  //   description: string,
+  //   image: string,
+  //   category: string
+   
+
+  // }
+
+  export interface Specific{
+
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+   
+
+  }
+  export interface onCreate{
+    
+    title:string
+  }
+
+  export interface Formdata{
+
+    title: string,
+    price: number,
+    description: string,
+    image: string,
+    category: string
+   
+
+  }  
+
+  export interface Dailog{
+    image: string,
+    title: string,
+    price: number,
+    description: string,
+
   }
